@@ -71,7 +71,7 @@ public class SolarSystemWithImages extends JPanel {
 //        planets.add(new Planet("Марс", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\mars.png", 1.52, 1.88, 25));
 //        planets.add(new Planet("Юпитер", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\youpiter.png", 5.20, 11.86, 60));
 //        planets.add(new Planet("Сатурн", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\saturn.png", 9.58, 29.46, 55));
-//        planets.add(new Planet("Уран", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Imageg\\uran.png", 19.22, 84.01, 40));
+//        planets.add(new Planet("Уран", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Imageg\\uran.png", 19.22, 84.01, 40));Л
 //        planets.add(new Planet("Нептун", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\neptun.png", 30.05, 164.8, 40));
 
         // Настройка таймера для анимации
