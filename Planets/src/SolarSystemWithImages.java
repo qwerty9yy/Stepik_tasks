@@ -7,24 +7,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SolarSystemWithImages extends JPanel {
+
+    // Размеры окна
     private static final int WIDTH = 1000;
     private static final int HEIGHT = 1000;
     private static final int SUN_RADIUS = 70;
 
+    // Таймер для анимации
     private Timer timer;
+
+    // Список планет
     private List<Planet> planets = new ArrayList<>();
+
+    // Изображения
     private BufferedImage sunImage;
     private BufferedImage backgroundImage;
 
     class Planet {
-        String name;
-        String imagePath;
-        double orbitRadius;  // в а.е. (масштабировано)
-        double orbitSpeed;   // скорость обращения (радиан/тик)
-        double angle;
-        int displaySize;
-        BufferedImage image;
+        String name;            // Название планеты
+        String imagePath;       // Путь к изображению
+        double orbitRadius;     // Радиус орбиты (в астрономических единицах, масштабировано)
+        double orbitSpeed;      // Скорость обращения (радиан/тик)
+        double angle;           // Текущий угол положения на орбите
+        int displaySize;        // Размер для отображения
+        BufferedImage image;    // Загруженное изображение
 
+        // Конструктор планеты
         Planet(String name, String imagePath, double orbitRadius, double orbitPeriod, int displaySize) {
             this.name = name;
             this.imagePath = imagePath;
@@ -35,10 +43,12 @@ public class SolarSystemWithImages extends JPanel {
             this.image = loadPlanetImage(imagePath, displaySize);
         }
 
+        // Обновление положения планеты
         void update() {
             angle += orbitSpeed;
         }
 
+        // Получение текущих координат планеты
         Point getPosition() {
             int centerX = WIDTH / 2;
             int centerY = HEIGHT / 2;
@@ -53,7 +63,7 @@ public class SolarSystemWithImages extends JPanel {
         try {
             backgroundImage = ImageIO.read(new File(""));
         } catch (Exception e) {
-            backgroundImage = null;
+            backgroundImage = null; // Если не удалось - будет черный фон
         }
 
         // Загрузка изображения Солнца
