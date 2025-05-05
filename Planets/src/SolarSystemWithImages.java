@@ -51,28 +51,28 @@ public class SolarSystemWithImages extends JPanel {
     public SolarSystemWithImages() {
         // Загрузка фонового изображения (по желанию)
         try {
-            backgroundImage = ImageIO.read(new File("C:\\space_bg.jpg"));
+            backgroundImage = ImageIO.read(new File(""));
         } catch (Exception e) {
             backgroundImage = null;
         }
 
         // Загрузка изображения Солнца
         try {
-            sunImage = ImageIO.read(new File("C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\sun.png"));
+            sunImage = ImageIO.read(new File("Planets/Image/sun.png"));
             sunImage = resizeImage(sunImage, SUN_RADIUS * 2, SUN_RADIUS * 2);
         } catch (Exception e) {
             sunImage = createDefaultImage(SUN_RADIUS, Color.YELLOW);
         }
 
         // Создание планет с указанием путей к изображениям
-        planets.add(new Planet("Меркурий", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\merkuriy.png", 1.6, 0.24, 20));
-        planets.add(new Planet("Венера", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\venera.png", 2, 0.62, 30));
-        planets.add(new Planet("Земля", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\earth.png", 2.5, 1.0, 30));
-//        planets.add(new Planet("Марс", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\mars.png", 1.52, 1.88, 25));
-//        planets.add(new Planet("Юпитер", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\youpiter.png", 5.20, 11.86, 60));
-//        planets.add(new Planet("Сатурн", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\saturn.png", 9.58, 29.46, 55));
-//        planets.add(new Planet("Уран", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Imageg\\uran.png", 19.22, 84.01, 40));Л
-//        planets.add(new Planet("Нептун", "C:\\Users\\Lite\\IdeaProjects\\Stepik_tasks\\Planets\\Image\\neptun.png", 30.05, 164.8, 40));
+        planets.add(new Planet("Меркурий", "Planets/Image/merkuriy.png", 1.6, 0.24, 20));
+        planets.add(new Planet("Венера", "Planets/Image/venera.png", 2, 0.62, 30));
+        planets.add(new Planet("Земля", "Planets/Image/earth.png", 2.5, 1.0, 30));
+        planets.add(new Planet("Марс", "Planets/Image/mars.png", 3, 1.88, 25));
+        planets.add(new Planet("Юпитер", "Planets/Image/youpiter.png", 3.8, 11.86, 60));
+        planets.add(new Planet("Сатурн", "Planets/Image/saturn.png", 4.6, 29.46, 55));
+        planets.add(new Planet("Уран", "Planets/Image/uran.png", 6, 84.01, 40));
+        planets.add(new Planet("Нептун", "Planets/Image/neptun.png", 7.5, 164.8, 40));
 
         // Настройка таймера для анимации
         timer = new Timer(20, e -> {
