@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class Snowman extends Canvas {
     private static BufferedImage img;
-
     public void paint(Graphics g) {
         g.drawImage(img, 0, 0, null);
     }
